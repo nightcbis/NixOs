@@ -53,6 +53,25 @@
     LC_TIME = "sv_SE.UTF-8";
   };
 
+
+  fileSystems."/mnt/Games" = {
+    device = "/dev/nvme0n1p6";
+    fsType = "ext4";
+    options = [
+      "users"
+      "nofail"
+    ];
+  };
+  
+  fileSystems."/mnt/GamesNew" = {
+    device = "/dev/nvme1n1p4";
+    fsType = "ext4";
+    options = [
+      "users"
+      "nofail"
+    ];
+  };
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
