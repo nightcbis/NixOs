@@ -70,7 +70,7 @@
     # # "Hello, world!" when run.
     # pkgs.hello
     pkgs.firefox #Browser
-    pkgs.waybar
+    pkgs.waybar #Waybar
     pkgs.thunar #File Manager
     pkgs.bat #cat replacement
     pkgs.hyprpaper #Wallpaper
@@ -78,7 +78,7 @@
     pkgs.hyprshot #Screenshot
     pkgs.plasticity #3D Program
     pkgs.fastfetch
-    pkgs.discord
+    pkgs.discord #Discord
     pkgs.dunst #Notifications
     pkgs.thunderbird #Mail
 
