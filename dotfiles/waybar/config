@@ -32,7 +32,7 @@
 
   "custom/rebuild": {
     "format": "",
-    "on-click": "kitty bash -c 'echo \"Enter password to rebuild your NixOs\"; sudo nixos-rebuild switch --flake ~andy/NixOs'",
+    "on-click": "kitty bash -c 'echo \"Enter password to rebuild your NixOs\"; sudo nixos-rebuild switch --flake ~andy/NixOs; sleep 5'",
     "tooltip-format": "Rebuild NixOs"
   },
 

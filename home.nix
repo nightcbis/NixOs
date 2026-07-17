@@ -20,7 +20,8 @@
   # release notes.
   home.stateVersion = "26.05"; # Please read the comment before changing.
 
-  home.file.".icons/default".source = "${pkgs.vanilla-dmz}/share/icons/Vanilla-DMZ"; # Cursor
+  #Cursor
+  home.file.".icons/default".source = "${pkgs.vanilla-dmz}/share/icons/Vanilla-DMZ";
 
   #Show linenumbers in neovim
   programs.neovim.extraConfig = ''
@@ -85,6 +86,7 @@
     pkgs.dunst #Notifications
     pkgs.libnotify
     pkgs.thunderbird #Mail
+    pkgs.nwg-clipman #Clipboard manager
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -112,8 +114,6 @@
 
     "/home/andy/.config/waybar/config".source = dotfiles/waybar/config;
     "/home/andy/.config/waybar/style.css".source = dotfiles/waybar/style.css;
-
-    #"/home/andy/.config/kitty/kitty.conf".source = dotfiles/kitty/kitty.conf;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
