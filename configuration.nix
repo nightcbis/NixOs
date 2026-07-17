@@ -54,26 +54,6 @@
   };
 
 
-  fileSystems."/mnt/Games" = {
-    device = "/dev/nvme0n1p6";
-    fsType = "ext4";
-    options = [
-      "users"
-      "nofail"
-      "exec"
-    ];
-  };
-  
-  fileSystems."/mnt/GamesNew" = {
-    device = "/dev/nvme1n1p4";
-    fsType = "ext4";
-    options = [
-      "users"
-      "nofail"
-      "exec"
-    ];
-  };
-
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
