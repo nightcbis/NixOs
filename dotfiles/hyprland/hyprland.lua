@@ -206,6 +206,54 @@ hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "
 --     border_size = 0,
 --     rounding    = 0,
 -- })
+--
+
+hl.workspace_rule({
+	workspace = "1",
+	monitor = "DP-1",
+	default_name = "Main",
+});
+
+hl.workspace_rule({
+	workspace = "2",
+	monitor = "DP-1",
+	default_name = "Terminal",
+});
+hl.workspace_rule({
+	workspace = "3",
+	monitor = "DP-1",
+	default_name = "Email",
+});
+hl.workspace_rule({
+	workspace = "4",
+	monitor = "DP-1",
+	default_name = "4",
+});
+hl.workspace_rule({
+	workspace = "5",
+	monitor = "DP-1",
+	default_name = "5",
+});
+hl.workspace_rule({
+	workspace = "6",
+	monitor = "DP-1",
+	default_name = "6",
+});
+hl.workspace_rule({
+	workspace = "7",
+	monitor = "HDMI-1-1",
+	default_name = "Left",
+});
+hl.workspace_rule({
+	workspace = "8",
+	monitor = "DP-2",
+	default_name = "Right",
+});
+hl.workspace_rule({
+	workspace = "9",
+	monitor = "DP-1",
+	default_name = "Games",
+});
 
 -- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
 hl.config({
@@ -291,13 +339,13 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
+-- hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 
 -- Move focus with mainMod + arrow keys
-hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
-hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
-hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
-hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
+hl.bind(mainMod .. " + h",  hl.dsp.focus({ direction = "left" }))
+hl.bind(mainMod .. " + l", hl.dsp.focus({ direction = "right" }))
+hl.bind(mainMod .. " + k",    hl.dsp.focus({ direction = "up" }))
+hl.bind(mainMod .. " + j",  hl.dsp.focus({ direction = "down" }))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]

@@ -60,6 +60,7 @@
     options = [
       "users"
       "nofail"
+      "exec"
     ];
   };
   
@@ -69,6 +70,7 @@
     options = [
       "users"
       "nofail"
+      "exec"
     ];
   };
 
