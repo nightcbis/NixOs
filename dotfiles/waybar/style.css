@@ -128,6 +128,7 @@
 
 }
 /* --- Right Modules (Single, Seamless Bar ) --- */
+#custom-rebuild,
 #bluetooth,
 #pulseaudio,
 #backlight,
@@ -153,7 +154,7 @@
 }
 
 
-
+#custom-rebuild:hover,
 #tray:hover,
 #custom-clipboard:hover,
 #bluetooth:hover,
