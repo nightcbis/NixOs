@@ -33,6 +33,35 @@
       confirm_os_window_close = 0;
     };
   };
+  
+  services.dunst = {
+    enable = true;
+    settings = {
+      global = {
+        monitor = 2;
+	follow = "none";
+	timeout = 5;
+      };
+      urgency_low = {
+        background = "#33CCFF";
+	frame_color = "#00FF99";
+	foreground = "#000000";
+	timeout = 5;
+      };
+      urgency_normal = {
+        background = "#33CCFF";
+	frame_color = "#00FF99";
+	foreground = "#000000";
+	timeout = 5;
+      };
+      urgency_critical = {
+        background = "#33CCFF";
+	frame_color = "#00FF99";
+	foreground = "#000000";
+	timeout = 5;
+      };
+    };
+  };
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -46,9 +75,11 @@
     pkgs.bat #cat replacement
     pkgs.hyprpaper #Wallpaper
     pkgs.hyprlauncher #Launcher
+    pkgs.hyprshot #Screenshot
     pkgs.plasticity #3D Program
     pkgs.fastfetch
     pkgs.discord
+    pkgs.dunst
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
