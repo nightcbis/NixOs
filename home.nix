@@ -38,7 +38,7 @@
     enable = true;
     settings = {
       global = {
-        monitor = 2;
+        monitor = 1;
 	follow = "none";
 	timeout = 5;
       };
@@ -80,6 +80,7 @@
     pkgs.fastfetch
     pkgs.discord #Discord
     pkgs.dunst #Notifications
+    pkgs.libnotify
     pkgs.thunderbird #Mail
 
     # # It is sometimes useful to fine-tune packages, for example, by applying

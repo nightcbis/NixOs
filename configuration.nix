@@ -176,8 +176,8 @@
   ];
 
   environment.shellAliases = {
-    nix-rebuild = "sudo nixos-rebuild switch --flake ~andy/Luna";
-    nix-testbuild = "nixos-rebuild build --flake ~andy/Luna";
+    nix-rebuild = "sudo nixos-rebuild switch --flake ~andy/NixOs";
+    nix-testbuild = "nixos-rebuild build --flake ~andy/NixOs";
     vim = "nvim";
     vi = "nvim";
     cat = "bat";
