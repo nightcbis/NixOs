@@ -20,6 +20,9 @@
   # release notes.
   home.stateVersion = "26.05"; # Please read the comment before changing.
 
+  home.file.".icons/default".source = "${pkgs.vanilla-dmz}/share/icons/Vanilla-DMZ"; # Cursor
+
+  #Show linenumbers in neovim
   programs.neovim.extraConfig = ''
     set number
     '';
