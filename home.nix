@@ -11,6 +11,10 @@
   home.username = "andy";
   home.homeDirectory = "/home/andy";
 
+  home.sessionVariables = {
+    EDITOR = "nvim";
+  };
+
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -106,9 +110,10 @@
   #
   #  /etc/profiles/per-user/andy/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = {
-    EDITOR = "nvim";
-  };
+
+  #home.sessionVariables = {
+  #  EDITOR = "nvim";
+  #};
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

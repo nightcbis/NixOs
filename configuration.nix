@@ -154,6 +154,7 @@
     vim = "nvim";
     vi = "nvim";
     cat = "bat";
+    clear = "clear; fastfetch";
   };
 
   # Some programs need SUID wrappers, can be configured further or are
