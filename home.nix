@@ -11,10 +11,6 @@
   home.username = "andy";
   home.homeDirectory = "/home/andy";
 
-  home.sessionVariables = {
-    EDITOR = "nvim";
-  };
-
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -24,13 +20,9 @@
   # release notes.
   home.stateVersion = "26.05"; # Please read the comment before changing.
 
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    extraConfig = ''
-      set number
+  programs.neovim.extraConfig = ''
+    set number
     '';
-  };
 
   programs.kitty = {
     enable = true;

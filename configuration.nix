@@ -119,6 +119,11 @@
     nerd-fonts.arimo
   ];
 
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+  };
+
   programs.bash.promptInit = ''
     eval "$(starship init bash)"
   '';
