@@ -79,8 +79,8 @@
     pkgs.plasticity #3D Program
     pkgs.fastfetch
     pkgs.discord
-    pkgs.dunst
-    pkgs.thunderbird
+    pkgs.dunst #Notifications
+    pkgs.thunderbird #Mail
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
