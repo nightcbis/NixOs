@@ -69,26 +69,28 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
-    pkgs.firefox #Browser
-    pkgs.waybar #Waybar
-    pkgs.thunar #File Manager
-    pkgs.bat #cat replacement
-    pkgs.hyprpaper #Wallpaper
-    pkgs.hyprlauncher #Launcher
-    pkgs.hyprshot #Screenshot
-    pkgs.plasticity #3D Program
-    pkgs.fastfetch
-    pkgs.discord-canary #Discord
-    pkgs.dunst #Notifications
-    pkgs.libnotify
-    pkgs.thunderbird #Mail
-    pkgs.nwg-clipman #Clipboard manager
-    pkgs.cliphist #Clipboard manager
-    pkgs.wl-clipboard #Clipboard manager
+    firefox #Browser
+    waybar #Waybar
+    thunar #File Manager
+    bat #cat replacement
+    hyprpaper #Wallpaper
+    hyprlauncher #Launcher
+    hyprshot #Screenshot
+    plasticity #3D Program
+    fastfetch
+    discord-canary #Discord
+    dunst #Notifications
+    libnotify
+    thunderbird #Mail
+    nwg-clipman #Clipboard manager
+    cliphist #Clipboard manager
+    wl-clipboard #Clipboard manager
+    lutris #Gaming
+    protonup-qt #Proton handler
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the

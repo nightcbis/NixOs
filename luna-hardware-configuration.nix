@@ -37,7 +37,7 @@
     };
 
   fileSystems."/mnt/Games" = {
-    device = "/dev/nvme0n1p6";
+    device = "/dev/disk/by-uuid/df021e32-99f4-4470-8c45-ad45f7405640";
     fsType = "ext4";
     options = [
       "users"
@@ -47,7 +47,7 @@
   };
   
   fileSystems."/mnt/GamesNew" = {
-    device = "/dev/nvme1n1p4";
+    device = "/dev/disk/by-uuid/d2cde1bc-b944-48ee-b253-94fe22e7f3de";
     fsType = "ext4";
     options = [
       "users"
