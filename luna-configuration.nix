@@ -11,24 +11,9 @@
       ./configuration.nix
     ];
 
-
   networking.hostName = "Luna"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
-
 
   #Steam
   programs.steam.enable = true;
-
-
-  environment.shellAliases = {
-    nix-rebuild = "sudo nixos-rebuild switch --flake ~andy/NixOs#Luna";
-    nix-testbuild = "nixos-rebuild build --flake ~andy/NixOs#Luna";
-  };
 
 }
