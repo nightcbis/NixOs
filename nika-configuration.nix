@@ -7,12 +7,12 @@
 {
   imports =
     [ # Include the results of the hardware scan. And the shared configuration.
-      ./luna-hardware-configuration.nix
+      ./nika-hardware-configuration.nix
       ./configuration.nix
     ];
 
 
-  networking.hostName = "Luna"; # Define your hostname.
+  networking.hostName = "Nika"; # Define your hostname.
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
 
