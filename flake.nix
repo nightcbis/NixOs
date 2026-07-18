@@ -17,10 +17,10 @@
 	home-manager.nixosModules.default
       ];
     };
-    nixosConfigrations.Nika = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.Nika = nixpkgs.lib.nixosSystem {
       modules = [
         ./nika-configuration.nix
-	home-manager.nixosMudles.default
+	home-manager.nixosModules.default
       ];
     };
   };
