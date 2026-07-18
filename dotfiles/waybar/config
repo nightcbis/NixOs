@@ -16,12 +16,12 @@
   ],
 
   "modules-right": [
-    "battery",
     "custom/rebuild",
     "tray",
     "bluetooth",
     "custom/clipboard",
     "pulseaudio", 
+    "battery",
     "clock"
   ],
 
