@@ -153,6 +153,7 @@
     playerctl #Play/Pause etc
     blueman
     bluez
+    xdg-desktop-portal-cosmic
   ];
 
   environment.shellAliases = {

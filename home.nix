@@ -82,11 +82,13 @@
     pkgs.hyprshot #Screenshot
     pkgs.plasticity #3D Program
     pkgs.fastfetch
-    pkgs.discord #Discord
+    pkgs.discord-canary #Discord
     pkgs.dunst #Notifications
     pkgs.libnotify
     pkgs.thunderbird #Mail
     pkgs.nwg-clipman #Clipboard manager
+    pkgs.cliphist #Clipboard manager
+    pkgs.wl-clipboard #Clipboard manager
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
