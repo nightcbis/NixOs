@@ -74,7 +74,6 @@ local menu        = "hyprlauncher"
 hl.on("hyprland.start", function ()
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("hyprpaper")
-	hl.exec_cmd(terminal)
 	hl.exec_cmd("dunst")
 	hl.exec_cmd("wl-paste --watch cliphist store")
 	hl.exec_cmd("XDG_SESSION_TYPE=x11 discordcanary")
