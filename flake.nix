@@ -13,8 +13,14 @@
   outputs = { self, nixpkgs, home-manager }: {
     nixosConfigurations.Luna = nixpkgs.lib.nixosSystem {
       modules = [ 
-        ./configuration.nix 
+        ./luna-configuration.nix 
 	home-manager.nixosModules.default
+      ];
+    };
+    nixosConfigrations.Nika = nixpkgs.lib.nixosSystem {
+      modules = [
+        ./nika-configuration.nix
+	home-manager.nixosMudles.default
       ];
     };
   };
