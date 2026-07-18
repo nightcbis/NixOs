@@ -70,7 +70,7 @@ hl.workspace_rule({
 });
 hl.workspace_rule({
 	workspace = "7",
-	monitor = "HDMI-1-1",
+	monitor = "HDMI-A-1",
 	default_name = "Left",
 });
 hl.workspace_rule({
