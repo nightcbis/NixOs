@@ -13,7 +13,6 @@
     wine #Gaming
     mangohud #Gaming
     gamemode #Gaming
-    openrgb #OpenRGB
   ];
 
   home.file = {
