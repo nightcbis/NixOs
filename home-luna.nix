@@ -13,6 +13,7 @@
     wine #Gaming
     mangohud #Gaming
     gamemode #Gaming
+    gimp #Image editor
   ];
 
   home.file = {
