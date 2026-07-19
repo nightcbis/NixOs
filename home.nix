@@ -67,6 +67,11 @@
     };
   };
 
+  gtk = {
+    enable = true;
+    colorScheme = "dark";
+  };
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
@@ -80,7 +85,7 @@
     hyprpaper #Wallpaper
     hyprlauncher #Launcher
     hyprshot #Screenshot
-    plasticity #3D Program
+    #plasticity #3D Program
     fastfetch
     discord-canary #Discord
     dunst #Notifications
@@ -89,8 +94,8 @@
     nwg-clipman #Clipboard manager
     cliphist #Clipboard manager
     wl-clipboard #Clipboard manager
-    lutris #Gaming
-    protonup-qt #Proton handler
+    #lutris #Gaming
+    #protonup-qt #Proton handler
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the

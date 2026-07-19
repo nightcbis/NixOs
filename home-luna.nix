@@ -4,6 +4,14 @@
 
 {
   imports = [ ./home.nix ];
+
+  home.packages = with pkgs; [
+    lutris #Gaming
+    protonup-qt #Proton version installer
+    plasticity #3D Program
+    prusa-slicer #Prusa Slicer
+  ];
+
   home.file = {
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
