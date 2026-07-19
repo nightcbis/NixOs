@@ -20,6 +20,7 @@
     "tray",
     "bluetooth",
     "custom/clipboard",
+    "network",
     "pulseaudio", 
     "battery",
     "clock"
