@@ -10,6 +10,9 @@
     protonup-qt #Proton version installer
     plasticity #3D Program
     prusa-slicer #Prusa Slicer
+    wine
+    mangohud
+    gamemode
   ];
 
   home.file = {
