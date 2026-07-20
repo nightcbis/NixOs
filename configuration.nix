@@ -62,9 +62,6 @@
   #Auto-login
   services.displayManager.autoLogin.user = "andy";
 
-  #Power button Suspend
-  services.logind.settings.Login.HandlePowerKey = "suspend";
-
   #Sound with pipewire
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;

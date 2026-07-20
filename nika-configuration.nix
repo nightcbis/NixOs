@@ -11,6 +11,8 @@
       ./configuration.nix
     ];
 
+  #Power Button
+  services.logind.settings.Login.HandlePowerKey = "hibernate";
 
   networking.hostName = "Nika"; # Define your hostname.
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
