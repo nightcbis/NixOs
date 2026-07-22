@@ -15,6 +15,7 @@
     gamemode #Gaming
     protontricks #Gaming
     gimp #Image editor
+    github-desktop #Desktop app for git
   ];
 
   home.file = {
