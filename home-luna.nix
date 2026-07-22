@@ -13,6 +13,7 @@
     wine #Gaming
     mangohud #Gaming
     gamemode #Gaming
+    protontricks #Gaming
     gimp #Image editor
   ];
 
