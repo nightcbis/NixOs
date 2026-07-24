@@ -111,6 +111,7 @@
   environment.systemPackages = with pkgs; [
     starship #mod for bash
     git
+    usbutils
     tealdeer #Kanske ta bort? Fick som tips ifrån någon video
     xclip #Kanske ta bort? Fick som tips ifårn någon video
     killall 
