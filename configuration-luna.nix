@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan. And the shared configuration.
-      ./luna-hardware-configuration.nix
+      ./hardware-configuration-luna.nix
       ./configuration.nix
     ];
 
@@ -20,17 +20,27 @@
   hardware.new-lg4ff.enable = true;
   services.udev.packages = with pkgs; [ oversteer ];
   
-  services.udev.extraRules = ''
+#  services.udev.extraRules = ''
   # Logitech G27 Driving Force Racing Wheel (Native Mode)
-  ATTRS{idProduct}=="c24f", ATTRS{idVendor}=="046d", MODE="0666"
+#  ATTRS{idProduct}=="c24f", ATTRS{idVendor}=="046d", MODE="0666"
 
   # Logitech G27 Driving Force Racing Wheel (Compatibility Mode)
-  ATTRS{idProduct}=="c29b", ATTRS{idVendor}=="046d", MODE="0666"
-'';
+#  ATTRS{idProduct}=="c29b", ATTRS{idVendor}=="046d", MODE="0666"
+#'';
 
   environment.systemPackages = with pkgs; [
     openrgb-with-all-plugins #OpenRGB
-    oversteer 
+    oversteer #Steering wheel
+    gamescope #Gaming
+    lutris #Gaming
+    protonup-qt #Gaming
+    wine #Gaming
+    mangohud #Gaming
+    gamemode #Gaming
+    protontricks #Gaming
+    gimp #Image editor
+    plasticity #3D Program
+    github-desktop #Desktop app for git.
   ];
   
   networking.hostName = "Luna"; # Define your hostname.

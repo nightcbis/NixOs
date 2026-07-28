@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan. And the shared configuration.
-      ./nika-hardware-configuration.nix
+      ./hardware-configuration-nika.nix
       ./configuration.nix
     ];
 
