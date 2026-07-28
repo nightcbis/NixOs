@@ -13,7 +13,7 @@
   outputs = { self, nixpkgs, home-manager }: {
     nixosConfigurations.Luna = nixpkgs.lib.nixosSystem {
       modules = [ 
-        ./luna-configuration.nix 
+        ./configuration-luna.nix 
 	home-manager.nixosModules.default {
 	  home-manager = {
 	    users.andy = ./home-luna.nix;
@@ -23,7 +23,7 @@
     };
     nixosConfigurations.Nika = nixpkgs.lib.nixosSystem {
       modules = [
-        ./nika-configuration.nix
+        ./configuration-nika.nix
 #	home-manager.nixosModules.default
         home-manager.nixosModules.default {
 	  home-manager = {
