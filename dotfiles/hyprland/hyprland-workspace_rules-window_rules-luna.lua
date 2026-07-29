@@ -151,6 +151,14 @@ hl.window_rule({
 	workspace = 8,
 })
 
+hl.window_rule({
+	name "Thunderbird",
+	match = {
+		class = "thunderbird",
+	},
+	workspace = 3,
+})
+
 -- Layer rules also return a handle.
 -- local overlayLayerRule = hl.layer_rule({
 --     name  = "no-anim-overlay",
