@@ -120,19 +120,35 @@ hl.window_rule({
 })
 
 hl.window_rule({
-	name = "RaceRoom",
+	name = "Any Steam game",
 	match = {
-		class = "^steam_app_211500$",
+		class = "steam_app_.*",
 	},
 	fullscreen = true,
 })
 
 hl.window_rule({
-	name = "DiRT 3",
+	name = "Game started in gamescope",
 	match = {
-		class = "^steam_app_321040$",
+		class = "gamescope",
 	},
 	fullscreen = true,
+})
+
+hl.window_rule({
+	name = "Steam",
+	match = {
+		class = "steam",
+	},
+	workspace = 9,
+})
+
+hl.window_rule({
+	name = "Discord",
+	match = {
+		class = "discord",
+	},
+	workspace = 8,
 })
 
 -- Layer rules also return a handle.
