@@ -152,7 +152,7 @@ hl.window_rule({
 })
 
 hl.window_rule({
-	name "Thunderbird",
+	name = "Thunderbird",
 	match = {
 		class = "thunderbird",
 	},
