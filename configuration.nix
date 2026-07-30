@@ -122,7 +122,22 @@
     bluez #Bluetooth
     xdg-desktop-portal-cosmic #Discord screensharing etc
     qview #Image viewer
+    yubioath-flutter #Yubikey Manager
   ];
+
+  #Krävs för smartcard-mode på Yubikey
+  services.pcscd.enable = true;
+  
+  #Yubikey för sudo
+  security.pam.services = {
+    sudo.u2fAuth = true;
+  };
+  security.pam.yubico = {
+    enable = true;
+    #debug = true;
+    mode = "challenge-response";
+    id = [ "26691363" ];
+  };
 
   environment.shellAliases = {
     nix-rebuild = "sudo nixos-rebuild switch --flake ~andy/NixOs";

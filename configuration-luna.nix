@@ -42,7 +42,7 @@
     plasticity #3D Program
     github-desktop #Desktop app for git.
   ];
-  
+
   networking.hostName = "Luna"; # Define your hostname.
 
   #Steam
