@@ -102,6 +102,7 @@
   };
 
   #Passar på att lägga bash prompt här. Fungerar detta i home.nix istället?
+  #Även skapat en funktion gitupdate för att lättare knuffa uppdateringar till github.
   programs.bash.promptInit = ''
     eval "$(starship init bash)"
     gitupdate() {
