@@ -132,6 +132,8 @@
   security.pam.services = {
     sudo.u2fAuth = true;
   };
+
+  #Läs guiden i wiki'n för att få detta att fungera
   security.pam.yubico = {
     enable = true;
     #debug = true;
