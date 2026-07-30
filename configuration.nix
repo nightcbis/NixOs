@@ -104,6 +104,9 @@
   #Passar på att lägga bash prompt här. Fungerar detta i home.nix istället?
   programs.bash.promptInit = ''
     eval "$(starship init bash)"
+    gitupdate() {
+      git commit -m "$1" *nix dotfiles/* && git push
+    }
   '';
 
   #Programs to install.
@@ -127,13 +130,10 @@
 
   #Krävs för smartcard-mode på Yubikey
   services.pcscd.enable = true;
-  
   #Yubikey för sudo
   security.pam.services = {
     sudo.u2fAuth = true;
   };
-
-  #Läs guiden i wiki'n för att få detta att fungera
   security.pam.yubico = {
     enable = true;
     #debug = true;
