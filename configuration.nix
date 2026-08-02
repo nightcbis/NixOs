@@ -75,7 +75,7 @@
   users.users."andy" = {
     isNormalUser = true;
     description = "andy";
-    extraGroups = [ "disk" "networkmanager" "wheel" ];
+    extraGroups = [ "disk" "networkmanager" "wheel" "dialout" ];
     #Uses home manager istead
     packages = with pkgs; [ ];
   };
