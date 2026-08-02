@@ -127,6 +127,7 @@
     xdg-desktop-portal-cosmic #Discord screensharing etc
     qview #Image viewer
     yubioath-flutter #Yubikey Manager
+    arduino-ide #Arduino
   ];
 
   #Krävs för smartcard-mode på Yubikey
