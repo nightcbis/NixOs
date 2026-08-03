@@ -128,6 +128,7 @@
     qview #Image viewer
     yubioath-flutter #Yubikey Manager
     arduino-ide #Arduino
+    galculator #Calculator
   ];
 
   #Krävs för smartcard-mode på Yubikey
