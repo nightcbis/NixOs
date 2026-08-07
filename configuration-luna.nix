@@ -41,6 +41,7 @@
     gimp #Image editor
     plasticity #3D Program
     github-desktop #Desktop app for git.
+    mqtt-explorer #MQTT
   ];
 
   networking.hostName = "Luna"; # Define your hostname.
