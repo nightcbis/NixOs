@@ -43,6 +43,7 @@
     github-desktop #Desktop app for git.
     mqtt-explorer #MQTT
     prusa-slicer #Prusa Slicer
+    lycheeslicer #SLA Slicer
   ];
 
   networking.hostName = "Luna"; # Define your hostname.
