@@ -42,6 +42,7 @@
     plasticity #3D Program
     github-desktop #Desktop app for git.
     mqtt-explorer #MQTT
+    prusa-slicer #Prusa Slicer
   ];
 
   networking.hostName = "Luna"; # Define your hostname.
