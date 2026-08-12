@@ -10,8 +10,9 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager }: {
+  outputs = inputs@{ self, nixpkgs, home-manager }: {
     nixosConfigurations.Luna = nixpkgs.lib.nixosSystem {
+      specialArgs = { inherit inputs; };
       modules = [ 
         ./configuration-luna.nix 
 	home-manager.nixosModules.default {
@@ -22,6 +23,7 @@
       ];
     };
     nixosConfigurations.Nika = nixpkgs.lib.nixosSystem {
+      specialArgs = { inherit inputs; };
       modules = [
         ./configuration-nika.nix
 #	home-manager.nixosModules.default

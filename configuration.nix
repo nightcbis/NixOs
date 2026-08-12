@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports = [];
@@ -129,6 +129,7 @@
     yubioath-flutter #Yubikey Manager
     arduino-ide #Arduino
     galculator #Calculator
+    waybar #Waybar
   ];
 
   #Krävs för smartcard-mode på Yubikey

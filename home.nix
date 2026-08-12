@@ -79,7 +79,7 @@
     # # "Hello, world!" when run.
     # pkgs.hello
     firefox #Browser
-    waybar #Waybar
+    #waybar #Waybar
     thunar #File Manager
     bat #cat replacement
     hyprpaper #Wallpaper
