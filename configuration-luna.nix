@@ -11,10 +11,15 @@
       ./configuration.nix
     ];
 
+  #Överklockning 
+  hardware.amdgpu.overdrive.enable = true;
+
   #Power Button
   services.logind.settings.Login.HandlePowerKey = "suspend";
 
   services.hardware.openrgb.enable = true; #För att OpenRGB ska få root-behörigheter
+
+  services.lact.enable = true;
 
   #Ratten
   hardware.new-lg4ff.enable = true;
@@ -44,6 +49,7 @@
     mqtt-explorer #MQTT
     prusa-slicer #Prusa Slicer
     lycheeslicer #SLA Slicer
+    lact #GPU Program?
   ];
 
   networking.hostName = "Luna"; # Define your hostname.
