@@ -113,6 +113,7 @@
   #Programs to install.
 
   environment.systemPackages = with pkgs; [
+    inputs.waybar.packages.${pkgs.stdenv.hostPlatform.system}.waybar
     starship #mod for bash
     git
     usbutils
@@ -129,7 +130,7 @@
     yubioath-flutter #Yubikey Manager
     arduino-ide #Arduino
     galculator #Calculator
-    waybar #Waybar
+ #   waybar #Waybar
   ];
 
   #Krävs för smartcard-mode på Yubikey

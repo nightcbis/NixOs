@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   nixpkgs = {
@@ -71,6 +71,7 @@
     enable = true;
     colorScheme = "dark";
   };
+
 
   # The home.packages option allows you to install Nix packages into your
   # environment.

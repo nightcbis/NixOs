@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    waybar.url = "github:alexays/waybar/master";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -10,7 +11,7 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, waybar }: {
     nixosConfigurations.Luna = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [ 
