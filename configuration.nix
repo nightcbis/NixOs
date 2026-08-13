@@ -106,7 +106,7 @@
   programs.bash.promptInit = ''
     eval "$(starship init bash)"
     gitupdate() {
-      git commit -m "$1" *nix dotfiles/* && git push
+      git commit -m "$1" flake.lock *nix dotfiles/* && git push
     }
   '';
 
