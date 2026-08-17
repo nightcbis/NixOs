@@ -131,6 +131,7 @@
     arduino-ide #Arduino
     galculator #Calculator
  #   waybar #Waybar
+    vlc #VLC
   ];
 
   #Krävs för smartcard-mode på Yubikey
