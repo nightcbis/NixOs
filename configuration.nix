@@ -132,6 +132,7 @@
     galculator #Calculator
  #   waybar #Waybar
     vlc #VLC
+    unzip #Unzip
   ];
 
   #Krävs för smartcard-mode på Yubikey
