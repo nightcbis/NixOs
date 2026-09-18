@@ -110,8 +110,12 @@
     }
   '';
 
-  #Programs to install.
+  #Needed for Bitwarden
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-39.8.10"
+  ];
 
+  #Programs to install.
   environment.systemPackages = with pkgs; [
     inputs.waybar.packages.${pkgs.stdenv.hostPlatform.system}.waybar
     starship #mod for bash
@@ -133,6 +137,7 @@
  #   waybar #Waybar
     vlc #VLC
     unzip #Unzip
+    bitwarden-desktop #Bitwarden
   ];
 
   #Krävs för smartcard-mode på Yubikey
