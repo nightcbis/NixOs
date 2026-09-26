@@ -108,6 +108,7 @@
     gitupdate() {
       git commit -m "$1" flake.lock *nix dotfiles/* && git push
     }
+    fastfetch
   '';
 
   #Needed for Bitwarden
