@@ -119,6 +119,7 @@
   #Programs to install.
   environment.systemPackages = with pkgs; [
     inputs.waybar.packages.${pkgs.stdenv.hostPlatform.system}.waybar
+    inputs.zen-browser.packages.x86_64-linux.twilight
     starship #mod for bash
     git
     usbutils
