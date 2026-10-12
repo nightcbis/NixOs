@@ -105,7 +105,7 @@
   #Även skapat en funktion gitupdate för att lättare knuffa uppdateringar till github.
   programs.bash.promptInit = ''
     eval "$(starship init bash)"
-    gitupdate() {
+    mygitupdate() {
       git commit -m "$1" flake.lock *nix dotfiles/* packages/* && git push
     }
     fastfetch

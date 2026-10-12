@@ -79,7 +79,7 @@
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
-    firefox #Browser
+    #firefox #Browser
     #waybar #Waybar
     thunar #File Manager
     bat #cat replacement
