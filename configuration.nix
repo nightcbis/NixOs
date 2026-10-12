@@ -116,10 +116,17 @@
     "electron-39.8.10"
   ];
 
+  #Make appimages work
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
+
   #Programs to install.
   environment.systemPackages = with pkgs; [
     inputs.waybar.packages.${pkgs.stdenv.hostPlatform.system}.waybar
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.twilight
+    inputs.tmog.packages.${pkgs.stdenv.hostPlatform.system}.default
     starship #mod for bash
     git
     usbutils
@@ -140,6 +147,7 @@
     vlc #VLC
     unzip #Unzip
     bitwarden-desktop #Bitwarden
+    appimage-run #Needed to start the appimage programs
   ];
 
   #Krävs för smartcard-mode på Yubikey
