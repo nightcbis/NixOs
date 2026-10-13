@@ -147,6 +147,20 @@
     unzip #Unzip
     bitwarden-desktop #Bitwarden
     appimage-run #Needed to start the appimage programs
+
+    thunar #Filemanager
+    bat #cat replacement
+    hyprpaper #Wallpaper
+    hyprlauncher #Launcher
+    hyprshot #Screenshot
+    fastfetch #Fastfetch
+    discord-canary #Discord
+    dunst #Notifications
+    libnotify #För notifications
+    thunderbird #Mail
+    nwg-clipman #Clipboard manager
+    cliphist #Clipboard manager
+    wl-clipboard #Clipboard manager alla 3 krävs
   ];
 
   #Krävs för smartcard-mode på Yubikey
