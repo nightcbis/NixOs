@@ -35,6 +35,7 @@
 
   environment.systemPackages = with pkgs; [
     openrgb-with-all-plugins #OpenRGB
+    arduino-ide #Arduino
     oversteer #Steering wheel
     gamescope #Gaming
     lutris #Gaming
