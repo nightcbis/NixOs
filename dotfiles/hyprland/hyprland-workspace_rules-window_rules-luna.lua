@@ -144,9 +144,19 @@ hl.window_rule({
 })
 
 hl.window_rule({
+	name = "Guild Wars 2",
+	match = {
+		class = "steam_app_default",
+		title = "Guild Wars 2",
+	},
+	float = true,
+	workspace = 9,
+})
+
+hl.window_rule({
 	name = "Discord",
 	match = {
-		class = "discord",
+		class = "discord-canary",
 	},
 	workspace = 8,
 })
