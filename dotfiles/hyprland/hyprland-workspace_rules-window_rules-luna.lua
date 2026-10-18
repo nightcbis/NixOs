@@ -144,6 +144,14 @@ hl.window_rule({
 })
 
 hl.window_rule({
+	name = "Lutris",
+	match = {
+		class = "net.lutris.Lutris",
+	},
+	workspace = 9,
+})
+
+hl.window_rule({
 	name = "Guild Wars 2",
 	match = {
 		class = "steam_app_default",
