@@ -4,7 +4,7 @@
 
   programs.appimage = {
     enable = true;
-    bitfmt = true;
+    binfmt = true;
   };
 
   environment.systemPackages = with pkgs; [
