@@ -21,6 +21,7 @@
       ./modules/user.nix
       ./modules/fonts.nix
       ./modules/bash.nix
+      ./modules/common.nix
       ./modules/apps/bitwarden.nix
       ./modules/apps/appimage.nix
       ./modules/apps/yubikey.nix
@@ -32,25 +33,22 @@
         specialArgs = { inherit inputs; };
         modules = sharedModules ++ [ 
           ./hosts/luna/configuration.nix 
-  	./configuration.nix
-  	./modules/gaming.nix
-  	./modules/apps/openrgb.nix
-  	home-manager.nixosModules.default {
-  	  home-manager = {
-  	    users.andy = ./home/luna.nix;
-  	  };
-  	}
+    	  ./modules/gaming.nix
+  	  ./modules/apps/openrgb.nix
+  	  home-manager.nixosModules.default {
+  	    home-manager = {
+  	      users.andy = ./home/luna.nix;
+  	    };
+          }
         ];
       };
       nixosConfigurations.Nika = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = sharedModules ++ [
           ./hosts/nika/configuration.nix
-  	./configuration.nix
-  #	home-manager.nixosModules.default
           home-manager.nixosModules.default {
-  	  home-manager = {
-  	    users.andy = ./home/nika.nix;
+  	    home-manager = {
+  	      users.andy = ./home/nika.nix;
             };
           }
         ];
