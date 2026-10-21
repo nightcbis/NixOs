@@ -6,6 +6,12 @@
       allowUnfree = true;
     };
   };
+
+  imports = [
+    ./modules/home/kitty.nix
+    ./modules/home/dunst.nix
+  ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "andy";
@@ -27,51 +33,11 @@
   programs.neovim.extraConfig = ''
     set number
     '';
-
-  programs.kitty = {
-    enable = true;
-    settings = {
-      dynamic_background_opacity = true;
-      background_opacity = "0.5";
-      background_blur = 5;
-      confirm_os_window_close = 0;
-    };
-  };
   
-  services.dunst = {
-    enable = true;
-    settings = {
-      global = {
-        monitor = 1;
-	follow = "none";
-	timeout = 5;
-      };
-      urgency_low = {
-        background = "#33CCFF";
-	frame_color = "#00FF99";
-	foreground = "#000000";
-	timeout = 5;
-      };
-      urgency_normal = {
-        background = "#33CCFF";
-	frame_color = "#00FF99";
-	foreground = "#000000";
-	timeout = 5;
-      };
-      urgency_critical = {
-        background = "#33CCFF";
-	frame_color = "#00FF99";
-	foreground = "#000000";
-	timeout = 5;
-      };
-    };
-  };
-
   gtk = {
     enable = true;
     colorScheme = "dark";
   };
-
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -81,46 +47,11 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-    # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-    # # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;
-
     "/home/andy/.config/hypr/hyprpaper.conf".source = dotfiles/hyprland/hyprpaper.conf;
-
     "/home/andy/.config/waybar/config".source = dotfiles/waybar/config;
     "/home/andy/.config/waybar/style.css".source = dotfiles/waybar/style.css;
-
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
-  };
-
-  # Home Manager can also manage your environment variables through
-  # 'home.sessionVariables'. These will be explicitly sourced when using a
-  # shell provided by Home Manager. If you don't want to manage your shell
-  # through Home Manager then you have to manually source 'hm-session-vars.sh'
-  # located at either
-  #
-  #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
-  #
-  # or
-  #
-  #  ~/.local/state/nix/profiles/profile/etc/profile.d/hm-session-vars.sh
-  #
-  # or
-  #
-  #  /etc/profiles/per-user/andy/etc/profile.d/hm-session-vars.sh
-  #
-
-  #home.sessionVariables = {
-  #  EDITOR = "nvim";
-  #};
+   };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-  
-
-}
+}  
