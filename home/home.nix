@@ -8,8 +8,8 @@
   };
 
   imports = [
-    ./modules/home/kitty.nix
-    ./modules/home/dunst.nix
+    ./modules/kitty.nix
+    ./modules/dunst.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -47,9 +47,9 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    "/home/andy/.config/hypr/hyprpaper.conf".source = dotfiles/hyprland/hyprpaper.conf;
-    "/home/andy/.config/waybar/config".source = dotfiles/waybar/config;
-    "/home/andy/.config/waybar/style.css".source = dotfiles/waybar/style.css;
+    "/home/andy/.config/hypr/hyprpaper.conf".source = ../dotfiles/hyprland/hyprpaper.conf;
+    "/home/andy/.config/waybar/config".source = ../dotfiles/waybar/config;
+    "/home/andy/.config/waybar/style.css".source = ../dotfiles/waybar/style.css;
    };
 
   # Let Home Manager install and manage itself.

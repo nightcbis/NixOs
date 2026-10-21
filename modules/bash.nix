@@ -4,7 +4,7 @@
   programs.bash.promptInit = ''
     eval "$(starship init bash)"
     mygitupdate() {
-      git commit -m "$1" flake.lock *nix dotfiles/* modules/* && git push
+      git commit -m "$1" flake.lock *nix dotfiles/* home/* home/modules/* modules/* && git push
     }
     fastfetch
   '';
