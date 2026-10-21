@@ -10,6 +10,7 @@
     ./modules/apps/bitwarden.nix
     ./modules/apps/appimage.nix
     ./modules/apps/yubikey.nix
+    ./modules/apps/discord.nix
   ];
 
   #Neovim Fick bara defaultEditor att fungera när jag hade den i config.nix istället för home.nix
@@ -20,7 +21,6 @@
 
   #Programs to install.
   environment.systemPackages = with pkgs; [
-    inputs.waybar.packages.${pkgs.stdenv.hostPlatform.system}.waybar
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.twilight
     inputs.tmog.packages.${pkgs.stdenv.hostPlatform.system}.default
     starship #mod for bash
@@ -36,28 +36,14 @@
     bluez #Bluetooth
     xdg-desktop-portal-cosmic #Discord screensharing etc
     qview #Image viewer
-    #yubioath-flutter #Yubikey Manager
     galculator #Calculator
- #   waybar #Waybar
     vlc #VLC
     unzip #Unzip
-#    bitwarden-desktop #Bitwarden
-#    appimage-run #Needed to start the appimage programs
 
     thunar #Filemanager
     bat #cat replacement
-    hyprpaper #Wallpaper
-    hyprlauncher #Launcher
-    hyprshot #Screenshot
     fastfetch #Fastfetch
     discord-canary #Discord
-    dunst #Notifications
-    libnotify #För notifications
     thunderbird #Mail
-    nwg-clipman #Clipboard manager
-    cliphist #Clipboard manager
-    wl-clipboard #Clipboard manager alla 3 krävs
   ];
-
-
 }
