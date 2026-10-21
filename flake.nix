@@ -17,10 +17,13 @@
     nixosConfigurations.Luna = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [ 
-        ./configuration-luna.nix 
+        ./hosts/luna/configuration.nix 
+	./configuration.nix
+	./modules/gaming.nix
+	./modules/apps/openrgb.nix
 	home-manager.nixosModules.default {
 	  home-manager = {
-	    users.andy = ./home-luna.nix;
+	    users.andy = ./home/luna.nix;
 	  };
 	}
       ];
@@ -28,11 +31,12 @@
     nixosConfigurations.Nika = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        ./configuration-nika.nix
+        ./hosts/nika/configuration.nix
+	./configuration.nix
 #	home-manager.nixosModules.default
         home-manager.nixosModules.default {
 	  home-manager = {
-	    users.andy = ./home-nika.nix;
+	    users.andy = ./home/nika.nix;
           };
 	}
       ];
