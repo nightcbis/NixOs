@@ -4,12 +4,6 @@
   imports = [
  ];
 
-  #Neovim Fick bara defaultEditor att fungera när jag hade den i config.nix istället för home.nix
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
-
   #Programs to install.
   environment.systemPackages = with pkgs; [
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.twilight

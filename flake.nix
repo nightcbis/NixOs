@@ -24,6 +24,7 @@
       ./modules/apps/bitwarden.nix
       ./modules/apps/appimage.nix
       ./modules/apps/yubikey.nix
+      ./modules/apps/neovim.nix
       ./modules/apps/discord.nix
     ];
     in {
