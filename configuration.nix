@@ -1,7 +1,12 @@
 { config, pkgs, inputs, ... }:
 
 {
-  imports = [];
+  imports = [
+    ./modules/bitwarden.nix
+    ./modules/appimage.nix
+    ./modules/bash.nix
+    ./modules/yubikey.nix
+  ];
   
   system.stateVersion = "26.05"; #Do not fucking touch!
 
@@ -101,27 +106,6 @@
     defaultEditor = true;
   };
 
-  #Passar på att lägga bash prompt här. Fungerar detta i home.nix istället?
-  #Även skapat en funktion gitupdate för att lättare knuffa uppdateringar till github.
-  programs.bash.promptInit = ''
-    eval "$(starship init bash)"
-    mygitupdate() {
-      git commit -m "$1" flake.lock *nix dotfiles/* packages/* && git push
-    }
-    fastfetch
-  '';
-
-  #Needed for Bitwarden
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-39.8.10"
-  ];
-
-  #Make appimages work
-  programs.appimage = {
-    enable = true;
-    binfmt = true;
-  };
-
   #Programs to install.
   environment.systemPackages = with pkgs; [
     inputs.waybar.packages.${pkgs.stdenv.hostPlatform.system}.waybar
@@ -134,19 +118,19 @@
     xclip #Kanske ta bort? Fick som tips ifårn någon video
     killall 
     wget
-    pavucontrol #Soundmixer
+    pavucontrol #Soundmixerplay
     playerctl #Play/Pause etc
     blueman #Bluetooth
     bluez #Bluetooth
     xdg-desktop-portal-cosmic #Discord screensharing etc
     qview #Image viewer
-    yubioath-flutter #Yubikey Manager
+    #yubioath-flutter #Yubikey Manager
     galculator #Calculator
  #   waybar #Waybar
     vlc #VLC
     unzip #Unzip
-    bitwarden-desktop #Bitwarden
-    appimage-run #Needed to start the appimage programs
+#    bitwarden-desktop #Bitwarden
+#    appimage-run #Needed to start the appimage programs
 
     thunar #Filemanager
     bat #cat replacement
@@ -163,28 +147,5 @@
     wl-clipboard #Clipboard manager alla 3 krävs
   ];
 
-  #Krävs för smartcard-mode på Yubikey
-  services.pcscd.enable = true;
-  #Yubikey för sudo
-  security.pam.services = {
-    sudo.u2fAuth = true;
-  };
-  security.pam.yubico = {
-    enable = true;
-    #debug = true;
-    mode = "challenge-response";
-    id = [ "26691363" ];
-  };
-
-  environment.shellAliases = {
-    mynix-rebuild = "sudo nixos-rebuild switch --flake ~andy/NixOs";
-    mynix-testbuild = "nixos-rebuild build --flake ~andy/NixOs";
-    mynix-update = "nix flake update --flake ~andy/NixOs";
-    mynix-garbage = "sudo nix-env --profile /nix/var/nix/profiles/system --delete-generations +5; sudo nix-collect-garbage -d; mynix-update";
-    vim = "nvim";
-    vi = "nvim";
-    cat = "bat";
-    clear = "clear; fastfetch";
-  };
 
 }
