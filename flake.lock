@@ -135,11 +135,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "path": "./modules/tmog",
+        "path": "./modules/apps/tmog",
         "type": "path"
       },
       "original": {
-        "path": "./modules/tmog",
+        "path": "./modules/apps/tmog",
         "type": "path"
       },
       "parent": []
