@@ -12,7 +12,7 @@
   #Move and split to two configs?
   home-manager = {
     users = {
-     "andy" = import ../home.nix;
+     "andy" = import ../home/home.nix;
     };
   };
 
