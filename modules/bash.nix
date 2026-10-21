@@ -12,7 +12,8 @@
   environment.shellAliases = {
     mynix-rebuild = "sudo nixos-rebuild switch --flake ~andy/NixOs";
     mynix-testbuild = "nixos-rebuild build --flake ~andy/NixOs";
-    mynix-update = "nix flake update --flake ~andy/NixOs";
+    mynix-update-full = "nix flake update --flake ~andy/NixOs";
+    mynix-update-nixpkgs = "nix flake update nixpkgs --flake ~andy/NixOs";
     mynix-garbage = "sudo nix-env --profile /nix/var/nix/profiles/system --delete-generations +5; sudo nix-collect-garbage -d; mynix-update";
     vim = "nvim";
     vi = "nvim";
