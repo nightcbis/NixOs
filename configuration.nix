@@ -2,16 +2,7 @@
 
 {
   imports = [
-    ./modules/boot.nix
-    ./modules/wm.nix
-    ./modules/user.nix
-    ./modules/fonts.nix
-    ./modules/bash.nix
-    ./modules/apps/bitwarden.nix
-    ./modules/apps/appimage.nix
-    ./modules/apps/yubikey.nix
-    ./modules/apps/discord.nix
-  ];
+ ];
 
   #Neovim Fick bara defaultEditor att fungera när jag hade den i config.nix istället för home.nix
   programs.neovim = {

@@ -13,33 +13,46 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, waybar, zen-browser, tmog }: {
-    nixosConfigurations.Luna = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
-      modules = [ 
-        ./hosts/luna/configuration.nix 
-	./configuration.nix
-	./modules/gaming.nix
-	./modules/apps/openrgb.nix
-	home-manager.nixosModules.default {
-	  home-manager = {
-	    users.andy = ./home/luna.nix;
-	  };
-	}
-      ];
+  outputs = inputs@{ self, nixpkgs, home-manager, waybar, zen-browser, tmog }: 
+    let 
+    sharedModules  = [
+      ./modules/boot.nix
+      ./modules/wm.nix
+      ./modules/user.nix
+      ./modules/fonts.nix
+      ./modules/bash.nix
+      ./modules/apps/bitwarden.nix
+      ./modules/apps/appimage.nix
+      ./modules/apps/yubikey.nix
+      ./modules/apps/discord.nix
+    ];
+    in {
+      nixosConfigurations.Luna = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = sharedModules ++ [ 
+          ./hosts/luna/configuration.nix 
+  	./configuration.nix
+  	./modules/gaming.nix
+  	./modules/apps/openrgb.nix
+  	home-manager.nixosModules.default {
+  	  home-manager = {
+  	    users.andy = ./home/luna.nix;
+  	  };
+  	}
+        ];
+      };
+      nixosConfigurations.Nika = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = sharedModules ++ [
+          ./hosts/nika/configuration.nix
+  	./configuration.nix
+  #	home-manager.nixosModules.default
+          home-manager.nixosModules.default {
+  	  home-manager = {
+  	    users.andy = ./home/nika.nix;
+            };
+          }
+        ];
+      };
     };
-    nixosConfigurations.Nika = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
-      modules = [
-        ./hosts/nika/configuration.nix
-	./configuration.nix
-#	home-manager.nixosModules.default
-        home-manager.nixosModules.default {
-	  home-manager = {
-	    users.andy = ./home/nika.nix;
-          };
-	}
-      ];
-    };
-  };
 }
