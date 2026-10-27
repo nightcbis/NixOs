@@ -3,9 +3,21 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    waybar.url = "github:alexays/waybar/master";
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
-    tmog.url = "path:./modules/apps/tmog";
+    
+    waybar = {
+      url = "github:alexays/waybar/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    tmog = {
+      url = "path:./modules/apps/tmog";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
