@@ -37,7 +37,7 @@
   	  ./modules/apps/openrgb.nix
   	  home-manager.nixosModules.default {
   	    home-manager = {
-  	      users.andy = ./home/luna.nix;
+  	      users.andy = ./homemanager/luna.nix;
   	    };
           }
         ];
@@ -48,7 +48,7 @@
           ./hosts/nika/configuration.nix
           home-manager.nixosModules.default {
   	    home-manager = {
-  	      users.andy = ./home/nika.nix;
+  	      users.andy = ./homemanager/nika.nix;
             };
           }
         ];
