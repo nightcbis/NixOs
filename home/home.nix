@@ -15,7 +15,7 @@
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "andy";
-  home.homeDirectory = "/home/andy";
+  home.homeDirectory = "~andy";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -47,9 +47,9 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    "/home/andy/.config/hypr/hyprpaper.conf".source = ../dotfiles/hyprland/hyprpaper.conf;
-    "/home/andy/.config/waybar/config".source = ../dotfiles/waybar/config;
-    "/home/andy/.config/waybar/style.css".source = ../dotfiles/waybar/style.css;
+    "~andy/.config/hypr/hyprpaper.conf".source = ../dotfiles/hyprland/hyprpaper.conf;
+    "~andy/.config/waybar/config".source = ../dotfiles/waybar/config;
+    "~andy/.config/waybar/style.css".source = ../dotfiles/waybar/style.css;
    };
 
   # Let Home Manager install and manage itself.
