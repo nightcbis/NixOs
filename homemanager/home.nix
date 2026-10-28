@@ -47,9 +47,13 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    ".config/hypr/hyprpaper.conf".source = ./dotfiles/hyprland/hyprpaper.conf;
     ".config/waybar/config".source = ./dotfiles/waybar/config;
     ".config/waybar/style.css".source = ./dotfiles/waybar/style.css;
+
+    #These are shared but some are not shared, so check luna.nix and nika.nix too
+    ".config/hypr/hyprpaper.conf".source = ./dotfiles/hyprland/shared/hyprpaper.conf;
+    ".config/hypr/hyprland.lua".source = ./dotfiles/hyprland/shared/hyprland.lua;
+    ".config/hypr/hyprland-etc.lua".source = ./dotfiles/hyprland/shared/hyprland-etc.lua;
    };
 
   # Let Home Manager install and manage itself.
