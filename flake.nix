@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    
+
     waybar = {
       url = "github:alexays/waybar/master";
       inputs.nixpkgs.follows = "nixpkgs";
