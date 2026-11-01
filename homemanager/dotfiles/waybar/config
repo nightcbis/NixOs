@@ -16,7 +16,6 @@
   ],
 
   "modules-right": [
-    "custom/rebuild",
     "tray",
     "bluetooth",
     "custom/clipboard",
