@@ -20,6 +20,8 @@
     cat = "bat";
     clear = "clear; fastfetch";
     ls = "eza -lhg --icons";
+    top = "btop";
+    killall = "pkill";
   };
 
 }

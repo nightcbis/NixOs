@@ -5,7 +5,8 @@
     #Terminal stuff
     starship #mod for bash
     bat #cat 
-    eza #ls
+    eza #ls replacement
+    btop #top replacement
     fastfetch #Fastfetch
     unzip #Unzip
     wget
@@ -15,6 +16,7 @@
     pavucontrol #Soundmixerplay
     blueman #Bluetooth
     bluez #Bluetooth
+    fzf #Ctrl+R for history of commands etc
  
 
 
