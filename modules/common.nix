@@ -5,6 +5,7 @@
     #Terminal stuff
     starship #mod for bash
     bat #cat 
+    eza #ls
     fastfetch #Fastfetch
     unzip #Unzip
     wget
