@@ -10,11 +10,13 @@
 
       tmog = pkgs.appimageTools.wrapType2 {
         pname = "tmog";
-        version = "1.0.0";
+        version = "1.1.1";
 
         src = pkgs.fetchurl {
-          url = "https://tmog.org/rtm/downloads/TaskManagerOG-1.0.0-x86_64.AppImage";
-          hash = "sha256-7jd6c5SfiQhju8+tCd02tgugR28Me8vQ0Os0NeKQKpY=";
+	  url = "https://tmog.org/downloads/TaskManagerOG-1.1.1-x86_64.AppImage";
+	  hash = "sha256-EqHy7WDCiwdJoT7q7EaW8kGkJftnFdnndHgHzmLTsTk=";
+	  # nix hash file --type sha256 TaskManagerOG-1.1.1-x86_64.AppImage
+	  # And then I got an error that showed the right hash....
         };
 
         extraInstallCommands = ''
