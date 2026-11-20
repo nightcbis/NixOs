@@ -17,6 +17,7 @@
     blueman #Bluetooth
     bluez #Bluetooth
     fzf #Ctrl+R for history of commands etc
+    superfile #Filemanager for terminal
  
 
 
